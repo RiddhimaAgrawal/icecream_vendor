@@ -1,5 +1,6 @@
 from display import load_menu_from_csv, display_menu
 def take_order(flavors, cones):
+    """this is to take input from user"""
     flavor_names = list(flavors.keys())
     cone_names = list(cones.keys())
     try:
@@ -20,6 +21,7 @@ def take_order(flavors, cones):
 
 
 def calculate_price(flavor, scoops, cone, flavors, cones):
+    """this is to calculate the total price of the ice-cream"""
     flavor_price = flavors[flavor] * scoops
     cone_price = cones[cone]
     total = flavor_price + cone_price
@@ -29,6 +31,7 @@ def calculate_price(flavor, scoops, cone, flavors, cones):
 from tabulate import tabulate
 
 def show_bill(order_list):
+    """this is to print the bill""
     headers = ["Flavor", "Scoops", "Cone", "Flavor Price", "Cone Price", "Total"]
     print("\nBILLING DETAILS:")
     print(tabulate(order_list, headers=headers, tablefmt="grid"))
