@@ -1,6 +1,6 @@
 import csv
 def load_menu_from_csv(file_path):
-    ""converting menu to csv file""
+    """converting menu to csv file"""
     flavors = {}
     cones = {}
     
@@ -18,7 +18,7 @@ def load_menu_from_csv(file_path):
     
     return flavors, cones
 def display_menu(flavors, cones):
-""displaying menu to user""
+"""displaying menu to user"""
     print("\nFlavors:")
     for i, (flavor, price) in enumerate(flavors.items(), 1):
         print(f"{i}. {flavor} - Rs.{price}/scoop")
